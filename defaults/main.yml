@@ -1,0 +1,11 @@
+---
+cron_jobs: []
+# - name: uptime
+#   job: uptime
+#   minute: "*/30"
+#   hour: "*"
+#   day: "*"
+#   month: "*"
+#   weekday: "*"
+#   user: "root"
+#   state: present

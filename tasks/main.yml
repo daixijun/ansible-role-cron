@@ -1,0 +1,18 @@
+---
+- name: Ensure cron jobs
+  cron:
+    name: "{{ item.name | default(omit)  }}"
+    minute: "{{ item.minute | default(omit)  }}"
+    hour: "{{ item.hour | default(omit) }}"
+    day: "{{ item.day | default(omit)  }}"
+    month: "{{ item.month | default(omit) }}"
+    weekday: "{{ item.weekday | default(omit) }}"
+    user: "{{ item.user | default('nobody') }}"
+    state: "{{ item.state | default(omit) }}"
+    special_time: "{{ item.special_time | default(omit) }}"
+    disabled: "{{ item.disabled | default(False) }}"
+    job: "{{ item.job | default('') }}"
+    env: "{{ item.env | default(False) }}"
+  loop: "{{ cron_jobs }}"
+  when:
+    - cron_jobs|length > 0
