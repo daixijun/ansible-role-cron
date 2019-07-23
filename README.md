@@ -11,7 +11,7 @@ Requirements
 Role Variables
 --------------
 
-[Role变量](defaults/main.yaml)
+[Role变量](defaults/main.yml)
 
 Example Playbook
 ----------------
